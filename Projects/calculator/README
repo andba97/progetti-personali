@@ -1,0 +1,22 @@
+# Java Calculator API
+
+Una semplice API REST per effettuare operazioni aritmetiche di base, sviluppata in Java utilizzando Spring Boot.  
+Il progetto è pensato come esercizio per approfondire concetti di sviluppo backend e strutturazione di controller RESTful.
+
+## 🚀 Funzionalità
+
+- Somma
+- Sottrazione
+- Moltiplicazione
+- Divisione
+- Gestione degli errori (es. divisione per zero)
+
+## 📁 Struttura del progetto
+
+- `App.java` – Punto di ingresso dell'applicazione Spring Boot.
+- `CalculatorController.java` – Contiene gli endpoint REST per le operazioni matematiche.
+
+## 🛠️ Tecnologie utilizzate
+
+- Java 17+
+- Maven 
