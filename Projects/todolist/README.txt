@@ -1,20 +1,38 @@
-Questa applicazione JavaFX permette di gestire più liste di task (ToDo Lists), con funzionalità per creare, modificare e filtrare le attività.
+📝 JavaFX ToDo List Manager
+Questa applicazione JavaFX consente di gestire più liste di attività (ToDo Lists), offrendo un’interfaccia intuitiva per creare, modificare, filtrare e organizzare i propri task.
 
-Caratteristiche principali
-Gestione Liste:
-Creazione, rinomina e cancellazione di liste di task.
+✨ Caratteristiche principali
+🗂️ Gestione Liste
+Crea nuove liste di task
+Rinomina o elimina liste esistenti
 
-Gestione Task:
-Aggiunta, modifica, rimozione di task all’interno di una lista selezionata.
+✅ Gestione Task
+Aggiungi, modifica o rimuovi task all'interno della lista selezionata
 
-Dettagli Task:
-Ogni task ha una descrizione, una data di scadenza (deadline), una priorità (Low, Medium, High) e uno stato di completamento (completo o no).
+Ogni task include:
+Descrizione
+Data di scadenza (Deadline)
+Priorità: Low, Medium, High
+Stato: Completato o Incompleto
 
-Interfaccia Utente:
-Lato sinistro c’è una ListView che mostra le liste di task. A destra, un VBox mostra i task della lista selezionata come pannelli espandibili (TitledPane), con controlli per data, priorità e completamento.
+🖥️ Interfaccia Utente
+ListView laterale per la selezione delle liste
+Visualizzazione dei task tramite pannelli espandibili (TitledPane) in un VBox
+Controlli interattivi per modificare rapidamente data, priorità e stato di completamento
 
-Filtri:
-È possibile filtrare i task mostrati per priorità e per data di scadenza, così da visualizzare solo quelli rilevanti.
+🔍 Filtri Avanzati
+Filtra i task visualizzati per:
+Priorità
+Data di scadenza
+Visualizza solo le attività rilevanti per il tuo contesto
 
-L’applicazione utilizza JPA con un EntityManager per salvare e recuperare dati da un database. Ogni modifica (creazione, modifica, cancellazione) viene sincronizzata con il database tramite transazioni.
+💾 Persistenza dei Dati
+Utilizzo di JPA (Java Persistence API) con EntityManager
+
+Tutte le operazioni (creazione, modifica, cancellazione) sono sincronizzate con un database relazionale tramite transazioni automatiche
+
+## 🛠️ Tecnologie utilizzate
+-Java 17+
+-JPA / Hibernate
+-Maven
 
