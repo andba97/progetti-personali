@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane minHeight="480.0" minWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.andba.todolist.controller.ToDoListController">
+   <left>
+       <VBox>
+           <MenuBar>
+               <menus>
+                   <Menu mnemonicParsing="false" text="File">
+                       <items>
+                           <MenuItem mnemonicParsing="false" onAction="#newList" text="New" />
+                       </items>
+                   </Menu>
+               </menus>
+           </MenuBar>
+           <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="Infinity" BorderPane.alignment="CENTER">
+               <content>
+                   <ListView fx:id="listView" onMouseClicked="#showTasks" maxHeight="Infinity" >
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <contextMenu>
+                           <ContextMenu>
+                               <items>
+                                   <MenuItem mnemonicParsing="false" text="Delete" onAction="#deleteList" />
+                                   <MenuItem mnemonicParsing="false" text="Rename" onAction="#renameList" />
+                                   <MenuItem mnemonicParsing="false" text="Add task" onAction="#AddTask" />
+                               </items>
+                           </ContextMenu>
+                       </contextMenu>
+                   </ListView>
+               </content>
+           </ScrollPane>
+       </VBox>
+   </left>
+   <center>
+      <ScrollPane  styleClass="centerScroll" fitToHeight="true" fitToWidth="true" >
+         <content>
+            <VBox fx:id="titledVBox" styleClass="vbox"/>
+         </content>
+      </ScrollPane>
+   </center>
+    <right>
+        <VBox >
+            <HBox BorderPane.alignment="CENTER">
+                <children>
+                    <DatePicker fx:id="filterDatePicker" layoutX="50.0" layoutY="50.0" onAction="#filterTasks"/>
+                    <ChoiceBox fx:id="filterChoicheBox" onAction="#filterTasks"/>
+                </children>
+            </HBox>
+            <Button text="Reset filter" onAction="#resetFilters" />
+        </VBox>
+    </right>
+</BorderPane>
