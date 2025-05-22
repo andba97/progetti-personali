@@ -351,19 +351,23 @@ public class CalculatorController {
                 }
 
                 // Se trova l'operatore "÷"
-                case "÷" -> {
-                    // Prende i due numeri (attenzione: ordine invertito rispetto al "-"!)
-                    result = Double.parseDouble(expression.get(i - 1));
-                    result /= Double.parseDouble(expression.get(i - 2));
+               case "÷" -> {
+                    double numerator = Double.parseDouble(expression.get(i - 2));
+                    double denominator = Double.parseDouble(expression.get(i - 1));
 
-                    // Salva il risultato e rimuove i due operandi
+                    if (denominator == 0) {
+                        clear(null); // Resetta la calcolatrice
+                        throw new ArithmeticException("Errore: divisione per zero.");
+                    }
+
+                    result = numerator / denominator;
+
                     expression.set(i, String.valueOf(result));
                     expression.remove(i - 1);
                     expression.remove(i - 2);
 
                     i -= 2;
                 }
-
                 // Se trova l'operatore "x"
                 case "x" -> {
                     // Prende i due numeri da moltiplicare
