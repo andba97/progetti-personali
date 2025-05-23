@@ -36,3 +36,19 @@ Tutte le operazioni (creazione, modifica, cancellazione) sono sincronizzate con 
 -JPA / Hibernate
 -Maven
 
+## Guida rapida per configurare il database del progetto ToDoList
+
+Passo 1: Modifica il file di configurazione
+Apri il file:
+src/main/resources/META-INF/persistence.xml
+
+Troverai queste proprietà:
+<property name="javax.persistence.jdbc.user" value="devuser"/>
+<property name="javax.persistence.jdbc.password" value="devuser"/>
+Modifica devuser e la password devuser con il nome utente e la password corretti del tuo database MySQL.
+
+Passo 2: Crea il database
+Apri il terminale MySQL connettiti e crea il database eseguendo:
+CREATE DATABASE todolist;
+
+Assicurati che il nome del database nel file persistence.xml corrisponda esattamente a todolist (case sensitive).
