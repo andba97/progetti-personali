@@ -1,0 +1,36 @@
+📚 FileAnalyzer
+FileAnalyzer è un'applicazione Java con interfaccia JavaFX che consente l'analisi di più opere letterarie, estraendo e ordinando le parole più frequenti in ciascun testo. È progettata per confrontare le prestazioni tra esecuzioni single-thread e multi-thread, offrendo un esempio pratico di programmazione concorrente.
+
+🚀 Funzionalità principali
+✅ Selezione tra 4 opere classiche:
+
+The Picture of Dorian Gray
+Moby Dick
+Pride and Prejudice
+Romeo and Juliet
+
+🔍 Conteggio delle parole ignorando le maiuscole e gli acronimi.
+
+⚙️ Tre modalità di esecuzione:
+
+Single Thread: analizza tutti i file in modo sequenziale.
+One Thread per File: ogni file viene analizzato in un thread dedicato.
+Two Threads per File: due thread collaborano su ciascun file.
+
+📊 Visualizzazione delle 10 parole più usate tra i file selezionati.
+
+⏱️ Misurazione e visualizzazione del tempo totale di esecuzione.
+
+🧠 Architettura
+AnalyzerController.java
+Gestisce l’interfaccia grafica e coordina il processo di analisi in base alle opzioni selezionate.
+
+FileAnalyzer.java
+Classe che implementa Runnable per supportare l’esecuzione concorrente. Gestisce il parsing del testo, la sincronizzazione e il conteggio delle parole.
+
+📌 Note tecniche
+È stato aggiunto un ritardo artificiale ogni 100 righe (Thread.sleep(30)) per simulare un carico computazionale e rendere più visibili le differenze di performance tra le varie modalità di esecuzione.
+
+L'obiettivo principale del progetto è dimostrare i vantaggi della programmazione multi-thread. Per questo motivo:
+Non è stata posta particolare attenzione alla grafica dell'interfaccia.
+Non è stato implementato un sistema avanzato per filtrare stop words (come and, the, to, ecc.), motivo per cui queste parole appaiono frequentemente tra le più usate.
