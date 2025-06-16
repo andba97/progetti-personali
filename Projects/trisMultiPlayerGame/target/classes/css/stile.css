@@ -1,0 +1,29 @@
+Button {
+    -fx-background-radius: 25; /* più alto = più stondato */
+    -fx-font-size: 14px;
+    -fx-background-color: #1554C0;
+    -fx-text-fill: white;
+}
+
+TextField, PasswordField {
+    -fx-border-radius: 30;
+    -fx-font-size: 18px;
+    -fx-border-width: 1;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #1554C0;
+    -fx-text-fill: #1554C0;
+}
+
+.root {
+    -fx-background-image: url("../img/BackGround.png");  /* o .png se è PNG */
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+Label {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0,0,0,0.4); /* sfondo nero trasparente */
+    -fx-padding: 2 5 2 5; /* spazio interno per distanziare il testo dai bordi */
+    -fx-background-radius: 5;
+}
