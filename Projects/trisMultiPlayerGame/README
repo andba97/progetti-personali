@@ -1,0 +1,61 @@
+🎮 JavaFX Multiplayer Tris (Tic-Tac-Toe)
+Questa applicazione JavaFX consente a due utenti di sfidarsi in tempo reale a una partita di Tris (Tic-Tac-Toe) tramite connessione client-server. Il gioco è progettato per offrire un’esperienza fluida e interattiva, con gestione degli utenti, sfide online e interfaccia grafica intuitiva.
+
+✨ Caratteristiche principali
+👤 Login & Registrazione
+Accesso tramite username e password.
+Registrazione con conferma password.
+Validazione lato client e lato server.
+Messaggi di feedback per ogni operazione.
+
+🔗 Connessione Online
+Elenco dei giocatori online aggiornato in tempo reale.
+Possibilità di sfidare un altro utente.
+Accettazione o rifiuto delle sfide.
+
+🎲 Gameplay
+Gioco a turni su una griglia 3x3.
+Scambio di mosse tramite socket JSON.
+Riconoscimento automatico di vittoria, pareggio o sconfitta.
+Gestione del primo turno e simboli (X / O).
+Interfaccia grafica con immagini per le mosse.
+
+📡 Comunicazione Client-Server
+Tutte le operazioni vengono inviate al server tramite messaggi JSON.
+Ricezione asincrona e gestione sicura dei messaggi tramite Platform.runLater.
+
+🖥️ Interfaccia Utente (JavaFX)
+Login / Registrazione: form con feedback in tempo reale.
+Lobby: lista dinamica dei giocatori con pulsanti per sfidare, accettare o rifiutare.
+Game View: griglia interattiva per il gioco, pulsante di conferma mossa, label di stato.
+
+🔁 Flusso Principale
+L’utente si autentica.
+Vede la lista dei giocatori disponibili.
+Sfida un altro giocatore o riceve una sfida.
+Inizia la partita con alternanza dei turni.
+Il risultato viene visualizzato e si torna alla lobby.
+
+🛠️ Tecnologie Utilizzate
+Java 17+
+JavaFX
+Socket TCP/JSON
+Jackson (ObjectMapper) per serializzazione/deserializzazione JSON
+FXML + SceneBuilder per la GUI
+
+✅ Possibili Miglioramenti
+Questo progetto è stato sviluppato come esercizio personale per testare un’architettura client-server con JavaFX e scambio di dati in formato JSON. 
+Funziona correttamente in condizioni ideali, ma alcuni casi limite non sono ancora gestiti:
+
+🧩 Casi Limite Attualmente Non Gestiti
+❌ Utente che non risponde a una sfida inviata.
+❌ Utente che si disconnette prima di rispondere ad una sfida.
+❌ Utente che si disconnette durante una partita.
+❌ Utente che si blocca o abbandona durante il proprio turno.
+
+Questi limiti possono essere superati con i seguenti miglioramenti futuri:
+🚀 Migliorie Tecniche Possibili
+⏱️ Timer per turno: per evitare blocchi in partita.
+🔌 Gestione sessioni utente: logout automatico, heartbeat per connessioni stabili.
+
+
